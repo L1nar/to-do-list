@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+.content {
+    background: linear-gradient(150deg, rgba(27, 133, 255, 0.6), rgba(220, 160, 255, 0.6), rgba(156, 3, 245, 0.6)), url(../img/rozovye-tiulpany-5.webp);
+    padding: 20px 5px;
+    text-align: center;
+}
+
+.to-do {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.line {
+    border: 1px solid black;
+    display: flex;
+    width: 600px;
+    margin-left: 180px;
+}
+
+.input-style {
+    width: 600px;
+    height: 30px;
+    background-color: rgb(162, 191, 255);   
+    border: none;
+}
+
+.input-style::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-style {
+    background-color: rgb(195, 143, 255);
+    border: none;
+    color: rgba(111, 0, 255, 0.425);
+    padding: 7px 50px;
+}
