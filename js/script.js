@@ -1,7 +1,6 @@
 const btn = document.querySelector('#btn');
 const input = document.querySelector('#input');
 const list = document.querySelector('#list');
-let elems = document.querySelector('ul li')
 
 btn.addEventListener('click', (event) => {
     const newItem = document.createElement('li'); // document.createElement(); - adds element.
@@ -16,9 +15,7 @@ btn.addEventListener('click', (event) => {
     newItem.appendChild(deleteBtn); // parent.appendChild - allows you to insert any element at the end of the element.
     list.appendChild(newItem);
     input.value = '';
-    list.addEventListener('click', (event) => {
-        if (event.target.tagName === 'LI') {
-          event.target.classList.toggle('checked');
-        }
-      });
+    newItem.addEventListener('click', (event) => {
+        event.target.classList.toggle('checked'); // classList.toggle(); - добовляет класс на страницу, если его нет и удаляет, если он есть.
+    });
 })

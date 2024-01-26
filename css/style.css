@@ -10,6 +10,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 ul>li {
@@ -21,11 +22,9 @@ ul {
     padding: 0;
 }
 
-ul, li {
+ul,
+li {
     transition: 0.4s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -48,13 +47,15 @@ p {
 .to-do {
     color: white;
     margin-bottom: 10px;
+    font-size: 32px;
 }
 
 .input-style {
     width: 600px;
     height: 30px;
-    background-color: rgb(162, 191, 255);   
+    background-color: rgb(162, 191, 255);
     border: none;
+    border-radius: 5px;
 }
 
 .input-style::placeholder {
@@ -66,23 +67,27 @@ p {
     border: none;
     color: rgba(111, 0, 255, 0.425);
     padding: 7px 50px;
+    border-radius: 5px;
 }
+
 
 .delete {
     color: rgba(255, 255, 255, 0.774);
-    background: linear-gradient(160deg, rgba(194, 7, 231, 0.5), rgba(250, 104, 153, 0.6),rgba(37, 34, 197, 0.6));
+    background: linear-gradient(160deg, rgba(194, 7, 231, 0.5), rgba(250, 104, 153, 0.6), rgba(37, 34, 197, 0.6));
     border: none;
     border-radius: 30%;
     margin-left: 2%;
-    padding: 3px 7px;
+    padding: 3px 10px;
+    font-size: 20px;
 }
 
 .item {
     color: white;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .list-style {
-    margin-top: 0px;
     background-color: rgb(95, 0, 248);
 }
 
@@ -90,4 +95,4 @@ li.checked {
     background-color: rgb(23, 0, 77);
     text-decoration: line-through;
     color: rgb(80, 80, 80);
-  }
+}
