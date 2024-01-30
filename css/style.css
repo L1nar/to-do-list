@@ -35,7 +35,9 @@ p {
 .wrapper {
     height: 100%;
     text-align: center;
+    align-items: center;
     background-color: rgba(60, 2, 114, 0.959);
+    position: relative;
 }
 
 .content {
@@ -96,3 +98,79 @@ li.checked {
     text-decoration: line-through;
     color: rgb(80, 80, 80);
 }
+
+.modal {
+    display: none;
+    width: 350px;
+    height: 150px;
+    margin-left: 790px;
+    margin-top: 200px;
+    background-color: white;
+    border-radius: 40px;
+    animation: opacity 0.3s;
+    position: absolute;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    left: 315px;
+    top: 4px;
+    border: none;
+    background: none;
+    font-size: 24px;
+}
+
+.modal-text {
+    position: absolute;
+    max-width: 250px;
+    left: 50px;
+    top: 30px;
+}
+
+.cancelBtn {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    background-color: rgb(85, 85, 85);
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 5px 5px;
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.cancelBtn:hover {
+    background-color: rgba(63, 63, 63);
+    transition: all 0.3s;
+}
+
+.removeBtn {
+    position: absolute;
+    background-color: red;
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 5px 5px;
+    color: white;
+    top: 100px;
+    left: 195px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.removeBtn:hover {
+    background-color: rgba(119, 1, 1);
+    transition: all 0.3s;
+} 

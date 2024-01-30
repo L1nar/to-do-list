@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="wrap">
         <div class="content">
             <div class="to-do">My to-do list
             </div>
@@ -22,8 +22,10 @@
         <ul id="list" class="list-style"></ul>
         <div id="myModal" class="modal">
             <div class="modal-content">
-              <span class="close">&times;</span>
-              <p></p>
+                <div class="modal-text">Вы действительно хотите удалить эту задачу</div>
+              <button class="closeBtn" id="close">&times;</button>
+              <button class="cancelBtn" id="cancel">Отмена</button>
+              <button class="removeBtn" id="remove">Удалить</button>
             </div>
           </div>
     </div>

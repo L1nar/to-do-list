@@ -1,6 +1,11 @@
 const btn = document.querySelector('#btn');
 const input = document.querySelector('#input');
 const list = document.querySelector('#list');
+const modalWindow = document.querySelector('#myModal');
+const closeBtn = document.querySelector('#close');
+const cancelBtn = document.querySelector('#cancel');
+const removeBtn = document.querySelector('#remove');
+const wrap = document.querySelector('#wrap');
 
 btn.addEventListener('click', (event) => {
     let newItem = document.createElement('li'); // document.createElement(); - adds element.
@@ -10,13 +15,18 @@ btn.addEventListener('click', (event) => {
     deleteBtn.textContent = 'x';
     deleteBtn.classList.add('delete');
     deleteBtn.addEventListener('click', () => {
-      const conf = confirm('Вы действительно хотите удалить эту задачу?');
-            if (conf === true) {
-                list.removeChild(newItem); // parent.removeChild - removes the specified element from parent.
-            } else {
-                return false;
-            }     
-    })
+      modalWindow.style.display = 'block';
+    });
+    closeBtn.addEventListener('click', () => {
+      modalWindow.style.display = 'none'
+    });
+    cancelBtn.addEventListener('click', () => {
+      modalWindow.style.display = 'none'
+    });
+    removeBtn.addEventListener('click', () => {
+      list.removeChild(newItem);
+      modalWindow.style.display = 'none';
+    });
     newItem.appendChild(deleteBtn); // parent.appendChild - allows you to insert any element at the end of the element.
     list.appendChild(newItem);
     input.value = '';
@@ -27,5 +37,5 @@ btn.addEventListener('click', (event) => {
       if (event.key === 'Enter') {
         btn.click();
       }
-    })
+    });
 });
