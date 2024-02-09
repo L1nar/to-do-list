@@ -108,7 +108,6 @@ li.checked {
     background-color: white;
     border-radius: 40px;
     animation: opacity 0.3s;
-    position: absolute;
 }
 
 @keyframes opacity {

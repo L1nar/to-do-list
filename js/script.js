@@ -33,9 +33,41 @@ btn.addEventListener('click', (event) => {
     newItem.addEventListener('click', (event) => {
         event.target.classList.toggle('checked'); // classList.toggle(); - добовляет класс на страницу, если его нет и удаляет, если он есть.
     });
-    input.addEventListener('keydown', (event) => {
+
+
+    function addTask() {
+      let newItem = document.createElement('li'); // document.createElement(); - adds element.
+      newItem.classList.add('item'); //element.classList - adds or removes classes for an element.
+      newItem.textContent = input.value; //textContent - allows you to read or set the text content of an element.
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'x';
+      deleteBtn.classList.add('delete');
+      deleteBtn.addEventListener('click', () => {
+        modalWindow.style.display = 'block';
+      });
+      closeBtn.addEventListener('click', () => {
+        modalWindow.style.display = 'none'
+      });
+      cancelBtn.addEventListener('click', () => {
+        modalWindow.style.display = 'none'
+      });
+      removeBtn.addEventListener('click', () => {
+        list.removeChild(newItem);
+        modalWindow.style.display = 'none';
+      });
+      newItem.appendChild(deleteBtn); // parent.appendChild - allows you to insert any element at the end of the element.
+      list.appendChild(newItem);
+      input.value = '';
+      newItem.addEventListener('click', (event) => {
+          event.target.classList.toggle('checked'); // classList.toggle(); - добовляет класс на страницу, если его нет и удаляет, если он есть.
+      });
+    }
+
+    btn.addEventListener('click', addTask);
+
+    input.addEventListener('keyup', (event) => {
       if (event.key === 'Enter') {
-        btn.click();
+        addTask(event);
       }
     });
 });
